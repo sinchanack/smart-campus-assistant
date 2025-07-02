@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Assistant - SCA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Welcome to <span class="accent">Smart Campus Assistant</span>!</h1>
+                <p>Your ultimate companion for managing campus life efficiently.</p>
+
+                <!-- Display Sign In, Log In, or Log Out based on session -->
+                {% if session.get('username') %}
+    <a href="/logout" class="styled-button">Log Out</a>
+{% else %}
+    <a href="/signin" class="styled-button">Sign In</a>
+    <a href="/login" class="styled-button">Log In</a>
+{% endif %}
+#logout
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      alert("{{ messages[0] }}");
+    </script>
+  {% endif %}
+{% endwith %}
+
+
+
+            </div>
+            <div class="hero-img">
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Key Features</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>🎉 Events</h3>
+                    <a href="{{ url_for('events') }}" class="btn-cta">View Events</a>
+                    <p>Stay updated with all the upcoming campus events.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📅 Calendar View</h3>
+                    <a href="{{ url_for('calendar') }}" class="btn-cta">View Calendar</a>
+                    <p>Keep track of your class schedules and important dates.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📝 Task Manager</h3>
+                    <a href="{{ url_for('taskmanager') }}" class="btn-cta">Task Manager</a>
+                    <p>Organize your tasks and assignments efficiently.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 Smart Campus Assistant | All rights reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In - Smart Campus Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="signin-wrapper">
+        <div class="signin-box">
+            <h2>Welcome Back</h2>
+            <p class="tagline">Please log in to your account</p>
+            
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+            
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <script>
+                        alert("{{ messages[0] }}");
+                    </script>
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST" class="signin-form">
+                <input type="text" name="username" placeholder="👤 Username" required>
+                <input type="password" name="password" placeholder="🔒 Password" required>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

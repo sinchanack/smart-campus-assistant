@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar | Smart Campus Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/fullcalendar.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/fullcalendar.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #bb86fc;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}">← Home</a>
+        <h1>📅 Smart Campus Calendar</h1>
+    </header>
+
+    <div id="calendar"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Fetch events and tasks from the backend or page data
+            var eventsData = [
+                { title: 'Internship Workshop', start: '2025-05-30', description: 'Learn tips to succeed in internships with expert mentors.' },
+                { title: 'Coding Contest', start: '2025-06-12', description: 'Put your coding skills to the test with exciting prizes!' },
+                { title: 'Cultural Fest', start: '2025-06-06', description: 'Dance, drama, music & more! A festival of student talents.' },
+                { title: 'Complete Python Assignment', start: '2025-06-27', description: 'Don\'t forget to push to GitHub!' }
+            ];
+            $(document).ready(function() {
+                $('#calendar').fullCalendar({
+                    events: [
+                        // Predefined events can go here
+                    ],
+                    eventRender: function(event, element) {
+                        element.find('.fc-title').append("<br/><small>" + event.description + "</small>");
+                    }
+                });
+            });
+            
+            events: [
+            { url: '/get_events' },
+            { url: '/get_tasks' }
+        ],
+        
+            // Initialize the calendar
+            $('#calendar').fullCalendar({
+                events: eventsData.map(event => ({
+                    title: event.title,
+                    start: event.start,
+                    description: event.description,
+                    color: '#6200ea', // Color to highlight the event
+                    textColor: '#fff', // Text color for event details
+                    editable: false
+                }))
+            });
+        });
+    </script>
+</body>
+</html>

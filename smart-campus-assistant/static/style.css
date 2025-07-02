@@ -1,0 +1,578 @@
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;  /* Soft light background */
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+
+
+
+.btn-cta {
+    background-color: #5cb85c;  /* Green button */
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-cta:hover {
+    background-color: #4cae4c;
+}
+
+.hero-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #1fabbd); /* Subtle light background */
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(to right, #ffffff, #f3e5f5);
+    padding: 80px 30px;
+    border-radius: 20px;
+    margin: 30px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    max-width: 1100px;
+    text-align: center;
+}
+
+.hero-box {
+    background-color: #ac2121d2;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 18px rgba(212, 18, 18, 0.05);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    color: #512da8;
+    margin-bottom: 15px;
+
+}
+
+.hero h1 .accent {
+    color: #7e57c2;
+    font-weight: 700;
+    margin: 7px;
+
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #211e1e;
+    margin-bottom: 30px;
+    margin: 7px;
+
+}
+
+.styled-button {
+    display: inline-block;
+    background-color: #6200ea;
+    color: #fff;
+    padding: 12px 25px;
+    margin: 7px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #3700b3;
+}
+
+
+/* Features Section */
+.features {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.features h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #777;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.content .box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content .dashboard {
+    background-color: #eaf7ff;
+}
+
+.content .events {
+    background-color: #f9f9f9;
+}
+
+/* Auth Buttons Styling */
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.auth-buttons .btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-img img {
+        width: 80%;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content .box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.signin-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.signin-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.signin-box h2 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.signin-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.signin-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0,123,255,0.3);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* Events Section */
+.events-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.event-card .date {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Dashboard Section */
+.dashboard-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: left;
+}
+
+.dashboard-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.dashboard-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard-card li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Calendar Section */
+.calendar-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.calendar {
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.calendar-day {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-day:hover {
+    background-color: #81c784;
+    cursor: pointer;
+}
+
+/* Button Styling */
+.btn-cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;  /* Green */
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #45a049;
+}
+
+.hero-text {
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    margin-top: 20px;
+}
+
+.hero-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.events-list {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.event-card {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #4CAF50;
+}
+
+.feature-button {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.feature-button:hover {
+    background-color: #4e4cc4;
+}
+.styled-button {
+    background-color: #6c63ff;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #4e4cc4;
+}
+
+header {
+    background-color: #6200ea;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #bb86fc;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+body {
+    background-image: url("/static/images/sca2.jpeg");
+    background: transparent;
+    background-size: cover; /* Adjust the percentage as needed to make it fit better */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Ensures the text is visible */
+}
+
+
+.features h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 12px 30px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 40px;
+}
+.features h2:hover {
+    transform: scale(1.03);
+}
+
+
+.highlight {
+    background-color: #fefefe;  /* Green background */
+    color: #000000;  /* White text color */
+    padding: 5px 10px;  /* Padding around the text */
+    border-radius: 5px;  /* Rounded corners */
+}

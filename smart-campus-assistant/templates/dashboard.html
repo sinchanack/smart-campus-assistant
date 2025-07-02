@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome, {{ username }}!</h1>
+        <div class="dashboard-cards">
+            <div class="dashboard-card">
+                <h3>Your Tasks</h3>
+                <ul>
+                    <li>Submit Project Report - Due 30th May</li>
+                    <li>Attend Workshop - 25th May</li>
+                    <li>Complete Assignment - 29th May</li>
+                </ul>
+            </div>
+            <div class="dashboard-card">
+                <h3>Recent Events</h3>
+                <ul>
+                    <li>Tech Talk on AI - 10th May</li>
+                    <li>Campus Clean-up Drive - 14th May</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
